@@ -1,0 +1,20 @@
+class Solution {
+    /**
+     * @param {character[]} s
+     * @return {void} Do not return anything, modify s in-place instead.
+     */
+    reverseString(s) {
+        let left = 0;
+        let right = s.length-1;
+        let temp = ''
+        while (left <= right) {
+            let temp = s[right];
+            s[right] = s[left];
+            s[left] = temp;
+            left++
+            right--
+
+        }
+        return s
+    }
+}
